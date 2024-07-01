@@ -5,6 +5,12 @@ body {
     color: white;
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+body.loaded {
+    opacity: 1;
 }
 
 ::selection {
@@ -23,6 +29,7 @@ body {
 
 .container {
     text-align: center;
+    padding: 0 20px;
 }
 
 .logo-wrapper {
@@ -30,7 +37,8 @@ body {
 }
 
 .logo {
-    width: 350px;
+    width: 100%;
+    max-width: 350px;
     height: auto;
     margin-bottom: 5px;
     user-select: none; /* Prevent user from selecting the image */
@@ -38,30 +46,43 @@ body {
 }
 
 h1 {
-    font-size: 3.5em;
+    font-size: 2.5em;
     margin-bottom: 10px;
 }
 
 .contact-info {
-    font-size: 2em;
-    margin-bottom: 30px;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.contact-info a {
-    color: white;
+.tag-link {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 5px;
     text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s;
+    color: white;
+    transition: background-color 0.3s;
 }
 
-.contact-info a:hover {
-    color: red;
+.tag-link:hover {
+    background-color: red;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .social-icons a {
-    margin: 0 15px;
+    margin: 10px;
     color: white;
-    font-size: 3.5em;
+    font-size: 2.5em;
     transition: transform 0.3s, color 0.3s;
     text-decoration: none;
 }
