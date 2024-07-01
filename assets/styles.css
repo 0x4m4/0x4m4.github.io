@@ -50,6 +50,12 @@ h1 {
     margin-bottom: 10px;
 }
 
+.description {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: red; /* Adjust color if needed */
+}
+
 .contact-info {
     font-size: 1.75em;
     margin-bottom: 20px;
